@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 #include "Spline.cpp"
-=======
 #include <iostream>
-
-#include "Vec2.h"
->>>>>>> master
 
 int main() {
 	
