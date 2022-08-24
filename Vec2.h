@@ -1,6 +1,8 @@
 #ifndef VEC2_H
 #define VEC2_H
 
+#include<iostream> //for the operator<< & the rest of files
+
 class Vec2
 {
 public:
@@ -33,9 +35,21 @@ public:
 		return Vec2(x_ * s, y_ * s);
 	}
 
+	float length() {
+		return std::sqrt(x_ * x_ + y_ * y_);
+	}
+
+	float lengthSquared() {
+		return x_ * x_ + y_ * y_;
+	}
+
 	friend std::ostream& operator<<(std::ostream& out, const Vec2& v) {
 		out << '(' << v.x_ << ',' << v.y_ << ')';
 		return out;
+	}
+
+	friend Vec2 lerp(const Vec2& a, const Vec2& b, float t) {
+		return a * t + b * (1.f - t);
 	}
 };
 

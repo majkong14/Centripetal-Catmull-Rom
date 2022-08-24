@@ -34,9 +34,21 @@ public:
 		return Vec3(x_ * s, y_ * s, z_ * s);
 	}
 
+	float length() {
+		return std::sqrt(x_ * x_ + y_ * y_ + z_ * z_);
+	}
+
+	float lengthSquared() {
+		return x_ * x_ + y_ * y_ + z_ * z_;
+	}
+
 	friend std::ostream& operator<<(std::ostream& out, const Vec3& v) {
 		out << '(' << v.x_ << ',' << v.y_ << ',' << v.z_ << ')';
 		return out;
+	}
+
+	friend Vec3 lerp(const Vec3& a, const Vec3& b, float t) {
+		return a * t + b * (1.f - t);
 	}
 };
 
