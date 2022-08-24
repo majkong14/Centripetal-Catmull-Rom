@@ -18,10 +18,22 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Spline.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec2.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="Vec3.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spline.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+=======
+>>>>>>> master
   </ItemGroup>
 </Project>
